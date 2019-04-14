@@ -19,10 +19,7 @@ router.post('/login', (req, res, next) => {
 });
 
 router.get('/register', authController.registerView);
-
-router.post('/register', (req, res, next) => {
-  res.render('register', { title: 'Register page'});
-});
+router.post('/register', authController.registerAction);
 
 router.get('/places', (req, res, next) => {
   res.render('places', { title: 'Register page'});
