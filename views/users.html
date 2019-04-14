@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Light Way Admin</title>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/local.css" />
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Admin Panel</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li><a href="#"><i class="fa fa-bullseye"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa fa-globe"></i> Google Places</a></li>
+                <li><a href="#"><i class="fa fa-user"></i> Edit My Profile</a></li>
+                <li><a href="#"><i class="fa fa-user-secret"></i> Edit My Password</a></li>
+                <li class="active"><a href="#"><i class="fa fa-list-ul"></i> Other Users</a></li>
+                <li><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-user">
+                <li>
+                    <a href="#"><i class="fa fa-user"></i> Steve Miller</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">All Users</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form action="" method="get" role="form">
+                <div class="col-lg-3">
+                    <select class="form-control" name="countryId">
+                        <option value="">Сhoose country</option>
+                        <option value="1">United States</option>
+                        <option value="2">Canada</option>
+                        <option value="3">United Kingdom</option>
+                        <option value="4">Ukraine</option>
+                        <option value="5">Belarus</option>
+                        <option value="6">Russia Federation</option>
+                        <option value="7">Zimbabwe</option>
+                    </select>
+                </div>
+                <div class="col-lg-9">
+                    <button type="submit" class="btn btn-primary">Find Users</button>
+                </div>
+            </form>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">E-mail Address</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Birthday</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Register Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Rachel Lopes</td>
+                            <td>rachellopes@jourrapide.com</td>
+                            <td>(312) 518-48-47</td>
+                            <td>April 23, 1990</td>
+                            <td>28</td>
+                            <td>Ukraine</td>
+                            <td>February 2, 2019 at 13:02</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Tracey Flint</td>
+                            <td>traceyflint@gmail.com</td>
+                            <td>(954) 228-99-38</td>
+                            <td>October 31, 1963</td>
+                            <td>55</td>
+                            <td>United States</td>
+                            <td>February 16, 2019 at 14:37</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Brian Hines</td>
+                            <td>brianhines@yahoo.com</td>
+                            <td>(914) 407-32-97</td>
+                            <td>August 17, 1970</td>
+                            <td>48</td>
+                            <td>Ukraine</td>
+                            <td>May 20, 2019 at 22:11</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8" class="text-center text-danger">No users found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
