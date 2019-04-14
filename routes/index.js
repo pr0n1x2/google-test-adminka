@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const authController = require('controllers/auth');
 
 router.get('/', function(req, res, next) {
   res.redirect('/home');
@@ -17,9 +18,7 @@ router.post('/login', (req, res, next) => {
   res.render('login', { title: 'Login page'});
 });
 
-router.get('/register', (req, res, next) => {
-  res.render('register', { title: 'Register page'});
-});
+router.get('/register', authController.registerView);
 
 router.post('/register', (req, res, next) => {
   res.render('register', { title: 'Register page'});
