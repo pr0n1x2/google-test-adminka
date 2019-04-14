@@ -30,6 +30,33 @@ const userSchema = new Schema({
     timestamps: true,
 });
 
+// Создаем виртуальное свойство, которого на самом деле не существует в реальной
+// коллекции, но мы можем к нему обратиться и получить значение на основе
+// вычислений, которые мы укажем в этом свойстве
+// Источник: https://mongoosejs.com/docs/guide.html#virtuals
+userSchema.virtual('fullName').get(function () {
+    return `${this.person.name} ${this.person.surname}`;
+});
+
+// Создаем виртуальное свойство age
+// Вычисляем его из даты рождения пользователя
+userSchema.virtual('age').get(function () {
+    if (this.person.birthday) {
+        const today = new Date();
+        const month = today.getMonth() - this.person.birthday.getMonth();
+
+        let age = today.getFullYear() - this.person.birthday.getFullYear();
+
+        if (month < 0 || (month === 0 && today.getDate() < this.birthday.getDate())) {
+            age--;
+        }
+
+        return age;
+    }
+
+    return null;
+});
+
 // Создаем коллекцию User на основе схемы userSchema
 const User = mongoose.model('User', userSchema);
 
