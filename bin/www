@@ -6,12 +6,16 @@ const { logger } = require('logger');
 
 const dbRunner = require('./runners/db');
 const webRunner = require('./runners/web');
+const seederCountryRunner = require('./runners/seeders/country');
+const seederUserRunner = require('./runners/seeders/user');
 
 require('events').EventEmitter.defaultMaxListeners = Infinity;
 
 Promise.resolve()
   .then(dbRunner)
   .then(webRunner)
+  .then(seederCountryRunner)
+  .then(seederUserRunner)
   .then(() => {
     console.log('\x1b[42m\x1b[30m ====> Ready to work <==== \x1b[0m');
   })
