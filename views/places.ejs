@@ -11,26 +11,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Admin Panel</a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <li><a href="#"><i class="fa fa-bullseye"></i> Dashboard</a></li>
-                <li class="active"><a href="#"><i class="fa fa-globe"></i> Google Places</a></li>
-                <li><a href="#"><i class="fa fa-user"></i> Edit My Profile</a></li>
-                <li><a href="#"><i class="fa fa-user-secret"></i> Edit My Password</a></li>
-                <li><a href="#"><i class="fa fa-list-ul"></i> Other Users</a></li>
-                <li><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right navbar-user">
-                <li>
-                    <a href="#"><i class="fa fa-user"></i> Steve Miller</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <%- include('nav'); -%>
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
