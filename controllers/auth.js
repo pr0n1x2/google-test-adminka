@@ -14,7 +14,7 @@ const bcrypt = require('bcrypt');
 const config = require('config');
 
 // Подключаем модуль json схемы profileJsonSchema
- const ProfileJsonSchema = require('schemes/profile');
+const ProfileJsonSchema = require('schemes/profile');
 
 // Подключаем модуль json схемы passwordJsonSchema
 const PasswordJsonSchema = require('schemes/password');
