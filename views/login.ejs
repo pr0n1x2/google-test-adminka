@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>Portfolio - Light Way Admin</title>
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css" />
@@ -18,16 +18,18 @@
                 <div class="panel-body">
                     <h2 class="text-primary">Log In Page</h2>
                     <hr/>
+                    <% if (error) { %>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="alert alert-danger">
-                                <strong>Error!</strong> Change a few things up and try submitting again.
+                                <strong>Error!</strong> <%= error %>
                             </div>
                         </div>
                     </div>
+                    <% } %>
                     <form action="" method="post" role="form">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="email" value="" maxlength="200" placeholder="Your E-mail">
+                            <input class="form-control" type="text" name="email" value="<%= data.email %>" maxlength="200" placeholder="Your E-mail">
                         </div>
                         <div class="form-group">
                             <input class="form-control" type="password" name="password" value="" maxlength="30" placeholder="Your password">
@@ -42,7 +44,7 @@
                         <hr/>
                         <div class="form-group">
                             <button type="submit" class="btn btn-success">Log In</button>
-                            <a href="" class="btn btn-default">Go To Register Page</a>
+                            <a href="/register" class="btn btn-default">Go To Register Page</a>
                         </div>
                     </form>
                 </div>
@@ -51,5 +53,6 @@
         <div class="col-lg-4"></div>
     </div>
 </div>
+<script src="/javascripts/login.js"></script>
 </body>
 </html>
